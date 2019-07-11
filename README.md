@@ -5,6 +5,7 @@
 * [x]  EXP4
 * [x]  EXP5
 * [x]  EXP6
-* [ ]  EXP7
-* [ ]  EXP8
-* [ ]  EXP9
+* [x]  EXP7
+* [x]  EXP8
+* [x]  EXP9
+* [x]  EXPX
