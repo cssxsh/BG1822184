@@ -5,16 +5,16 @@
 
 int main(void)
 {
-	Stus * AllStu = NULL;
-	int stunum;
-	Records data = NULL;
+    Stus *AllStu = NULL;
+    int stunum;
+    Records data = NULL;
 
-	LoadScoreData(DATA, &data);
-	LoadStudentInfo(INFO, &AllStu, &stunum);
-	// ½øÈëÖ÷²Ëµ¥
-	MainMemu(AllStu, data, stunum);
+    LoadScoreData(DATA, &data);
+    LoadStudentInfo(INFO, &AllStu, &stunum);
+    // è¿›å…¥ä¸»èœå•
+    MainMemu(AllStu, data, stunum);
 
-	// ÊÍ·Å×ÊÔ´
-	FreeStruct(AllStu, data, stunum);
-	return 0;
+    // é‡Šæ”¾èµ„æº
+    FreeStruct(AllStu, data, stunum);
+    return 0;
 }

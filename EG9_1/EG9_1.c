@@ -1,48 +1,48 @@
 #define _CRT_SECURE_NO_WARNINGS
-#include <stdio.h> 
-#include <stdlib.h> 
-#include <string.h> 
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 struct stud_node
 {
-	int num;
-	char name[20];
-	int score;
-	struct stud_node *next;
+    int num;
+    char name[20];
+    int score;
+    struct stud_node *next;
 };
 int main()
 {
-	struct stud_node *head =  NULL, *tail = NULL, *p = NULL;
-	int num, score;
-	char name[20];
-	const int size = sizeof(struct stud_node);
+    struct stud_node *head = NULL, *tail = NULL, *p = NULL;
+    int num, score;
+    char name[20];
+    const int size = sizeof(struct stud_node);
 
-	head = tail = NULL;
-	printf("input num, name and score:\n");
-	scanf("%d", &num);
-	while (num != 0)
-	{
-		p = malloc(size);
-		scanf("%s %d", name, &score);
-		p->num = num;
-		strcpy(p->name, name);
-		p->score = score;
-		p->next = NULL;
-		// µ±Á´±íÎª¿ÕÊ±£¬¸³Öµ²»Ò»Ñù
-		// ½¨ÒéÊ¹ÓÃ´øÍ·½ÚµãµÄµÄÁ´±í
-		if (head != NULL)
-		{
-			tail->next = p;
-		}
-		else
-		{
-			tail = p;
-			head = p;
-			head->next = tail;
-		}
-		tail = p;
-		scanf("%d", &num);
-	}
-	for (p = head; p->next != NULL; p = p->next)
-		printf("%d  %s  %d\n", p->num, p->name, p->score);
-	return  0;
+    head = tail = NULL;
+    printf("input num, name and score:\n");
+    scanf("%d", &num);
+    while (num != 0)
+    {
+        p = malloc(size);
+        scanf("%s %d", name, &score);
+        p->num = num;
+        strcpy(p->name, name);
+        p->score = score;
+        p->next = NULL;
+        // å½“é“¾è¡¨ä¸ºç©ºæ—¶ï¼Œèµ‹å€¼ä¸ä¸€æ ·
+        // å»ºè®®ä½¿ç”¨å¸¦å¤´èŠ‚ç‚¹çš„çš„é“¾è¡¨
+        if (head != NULL)
+        {
+            tail->next = p;
+        }
+        else
+        {
+            tail = p;
+            head = p;
+            head->next = tail;
+        }
+        tail = p;
+        scanf("%d", &num);
+    }
+    for (p = head; p->next != NULL; p = p->next)
+        printf("%d  %s  %d\n", p->num, p->name, p->score);
+    return 0;
 }

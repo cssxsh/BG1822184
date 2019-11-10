@@ -3,19 +3,19 @@
 
 int main(void)
 {
-	// sum Î´ÉùÃ÷¾ÍÊ¹ÓÃ
-	float sum = 0.0;
+    // sum æœªå£°æ˜å°±ä½¿ç”¨
+    float sum = 0.0;
 
-	int a[5] = { 5, 4, 3, 2, 1 };
-	int i;
+    int a[5] = {5, 4, 3, 2, 1};
+    int i;
 
-	// Êı×éÏÂ±êÆğÊ¼Îª0
-	for (i = 0; i < 5; i++)
-	{
-		sum = sum + a[i];
-	}
-	// c ÓïÑÔÑÏ¸ñÇø·Ö´óĞ¡Ğ´ Sum Ó¦Îª sum
-	printf("sum=%f\n", sum);
+    // æ•°ç»„ä¸‹æ ‡èµ·å§‹ä¸º0
+    for (i = 0; i < 5; i++)
+    {
+        sum = sum + a[i];
+    }
+    // c è¯­è¨€ä¸¥æ ¼åŒºåˆ†å¤§å°å†™ Sum åº”ä¸º sum
+    printf("sum=%f\n", sum);
 
-	return 0;
+    return 0;
 }

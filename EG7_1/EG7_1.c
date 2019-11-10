@@ -2,25 +2,26 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// ²ÎÊıÓ¦¸ÃÊÇÊı×é»òÕßÖ¸ÕëĞÎÊ½
+// å‚æ•°åº”è¯¥æ˜¯æ•°ç»„æˆ–è€…æŒ‡é’ˆå½¢å¼
 void mystrc(char *s, char *t);
 int main(void)
 {
-	char s[80], t[80];
-	gets(s);
-	gets(t);
-	mystrc(s, t);
-	puts(t);
-	return 0;
+    char s[80], t[80];
+    gets(s);
+    gets(t);
+    mystrc(s, t);
+    puts(t);
+    return 0;
 }
-void mystrc(char *s, char *t)//; ¶àÓàµÄ·ÖºÅ
+void mystrc(char *s, char *t) //; å¤šä½™çš„åˆ†å·
 {
-	while (*t != '\0') t++;
-	while (*s != '\0')
-	{
-		*t = *s;
-		t++;
-		s++;
-	}
-	*t = '\0';
+    while (*t != '\0')
+        t++;
+    while (*s != '\0')
+    {
+        *t = *s;
+        t++;
+        s++;
+    }
+    *t = '\0';
 }

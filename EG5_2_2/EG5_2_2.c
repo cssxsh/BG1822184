@@ -7,25 +7,25 @@
 
 int main(void)
 {
-	int score[STU_NUM], count[Level];
-	char temp[STU_NUM + 1];
-	srand(1701420218);
-	memset(count, 0, sizeof(int) * Level);
-	// Í¨¹ıËæ»úÊı²úÉúÆÀ¼ÛÊı¾İ
-	for (int i = 0; i < STU_NUM; i++)
-	{
-		score[i] = rand() % 10 + 1;
-	}
-	for (int i = 0; i < STU_NUM; i++)
-	{
-		count[score[i]]++;
-	}
-	printf("Grade\tCount\tHistogram\n");
-	for (int i = 1; i < Level; i++)
-	{
-		memset(temp, '*', count[i]);
-		temp[count[i]] = '\0';
-		printf("%d\t%d\t%s\n", i, count[i], temp);
-	}
-	return 0;
+    int score[STU_NUM], count[Level];
+    char temp[STU_NUM + 1];
+    srand(1701420218);
+    memset(count, 0, sizeof(int) * Level);
+    // é€šè¿‡éšæœºæ•°äº§ç”Ÿè¯„ä»·æ•°æ®
+    for (int i = 0; i < STU_NUM; i++)
+    {
+        score[i] = rand() % 10 + 1;
+    }
+    for (int i = 0; i < STU_NUM; i++)
+    {
+        count[score[i]]++;
+    }
+    printf("Grade\tCount\tHistogram\n");
+    for (int i = 1; i < Level; i++)
+    {
+        memset(temp, '*', count[i]);
+        temp[count[i]] = '\0';
+        printf("%d\t%d\t%s\n", i, count[i], temp);
+    }
+    return 0;
 }

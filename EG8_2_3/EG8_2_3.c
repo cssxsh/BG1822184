@@ -2,95 +2,96 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-
 struct stu
 {
-	char stuId[11];		// Ñ§ÉúÑ§ºÅ
-	char stuName[8];	// Ñ§ÉúĞÕÃû
-	char *courseName;	// ¿Î³ÌÃû³Æ
-	float Regular;		// Æ½Ê±³É¼¨
-	float Exam;			// ¿¼ÊÔ³É¼¨
-	float Total;		// ×ÜÆÀ³É¼¨
+    char stuId[11];   // å­¦ç”Ÿå­¦å·
+    char stuName[8];  // å­¦ç”Ÿå§“å
+    char *courseName; // è¯¾ç¨‹åç§°
+    float Regular;    // å¹³æ—¶æˆç»©
+    float Exam;       // è€ƒè¯•æˆç»©
+    float Total;      // æ€»è¯„æˆç»©
 };
-struct stu * getStuScore(int n, FILE * in);
-void CalcScore(int n, struct stu stus[], FILE * out);
-void GetMaxAndMin(int n, struct stu stus[], FILE * out);
-void freeStruct(struct stu * stus);
+struct stu *getStuScore(int n, FILE *in);
+void CalcScore(int n, struct stu stus[], FILE *out);
+void GetMaxAndMin(int n, struct stu stus[], FILE *out);
+void freeStruct(struct stu *stus);
 
 int main(void)
 {
-	int n;
-	struct stu * stus = NULL;
-	FILE *data_txt;
-	FILE *T_data_txt;
+    int n;
+    struct stu *stus = NULL;
+    FILE *data_txt;
+    FILE *T_data_txt;
 
+    data_txt = fopen("D:\\Users\\CSSXSH\\Documents\\$ c_work\\BG1822184\\Debug\\data.txt", "r");
+    T_data_txt = fopen("D:\\Users\\CSSXSH\\Documents\\$ c_work\\BG1822184\\Debug\\T_data.txt", "w");
 
-	data_txt = fopen("D:\\Users\\CSSXSH\\Documents\\$ c_work\\BG1822184\\Debug\\data.txt", "r");
-	T_data_txt  = fopen("D:\\Users\\CSSXSH\\Documents\\$ c_work\\BG1822184\\Debug\\T_data.txt", "w");
-
-	fscanf(data_txt, "%d", &n);
-	stus = getStuScore(n, data_txt);
-	CalcScore(n, stus, T_data_txt);
-	GetMaxAndMin(n, stus, T_data_txt);
-	freeStruct(stus);
-	fclose(data_txt);
-	fclose(T_data_txt);
-	return 0;
+    fscanf(data_txt, "%d", &n);
+    stus = getStuScore(n, data_txt);
+    CalcScore(n, stus, T_data_txt);
+    GetMaxAndMin(n, stus, T_data_txt);
+    freeStruct(stus);
+    fclose(data_txt);
+    fclose(T_data_txt);
+    return 0;
 }
-struct stu * getStuScore(int n, FILE * in)
+struct stu *getStuScore(int n, FILE *in)
 {
-	char *courseName = NULL;
-	struct stu * stus = NULL;
-	int c = 'c';
-	stus = malloc((sizeof(struct stu) * n));
-	courseName = malloc((sizeof(char) * 32));
+    char *courseName = NULL;
+    struct stu *stus = NULL;
+    int c = 'c';
+    stus = malloc((sizeof(struct stu) * n));
+    courseName = malloc((sizeof(char) * 32));
 
-	while (c != EOF && c != '\n') { c = fgetc(in); }
-	fgets(courseName, 32, in);
+    while (c != EOF && c != '\n')
+    {
+        c = fgetc(in);
+    }
+    fgets(courseName, 32, in);
 
-	for (int i = 0; i < n; i++)
-	{
-		fscanf(in, "%s %s", stus[i].stuId, stus[i].stuName);
-		stus[i].courseName = courseName;
-		fscanf(in, "%f", &stus[i].Regular);
-		fscanf(in, "%f", &stus[i].Exam);
-	}
-	return stus;
+    for (int i = 0; i < n; i++)
+    {
+        fscanf(in, "%s %s", stus[i].stuId, stus[i].stuName);
+        stus[i].courseName = courseName;
+        fscanf(in, "%f", &stus[i].Regular);
+        fscanf(in, "%f", &stus[i].Exam);
+    }
+    return stus;
 }
-void CalcScore(int n, struct stu stus[], FILE * out)
+void CalcScore(int n, struct stu stus[], FILE *out)
 {
-	for (int i = 0; i < n; i++)
-	{
-		stus[i].Total = stus[i].Regular  * 0.20 + stus[i].Exam  * 0.80;
-		fprintf(out, "µÚ%d¸öÑ§Éú×ÜÆÀ³É¼¨Îª%f\n", i + 1, stus[i].Total);
-	}
+    for (int i = 0; i < n; i++)
+    {
+        stus[i].Total = stus[i].Regular * 0.20 + stus[i].Exam * 0.80;
+        fprintf(out, "ç¬¬%dä¸ªå­¦ç”Ÿæ€»è¯„æˆç»©ä¸º%f\n", i + 1, stus[i].Total);
+    }
 }
-void GetMaxAndMin(int n, struct stu stus[], FILE * out)
+void GetMaxAndMin(int n, struct stu stus[], FILE *out)
 {
-	struct stu * Max = NULL, *Min = NULL;
-	for (int i = 0; i < n; i++)
-	{
-		if (Max == NULL || Max->Total < stus[i].Total)
-		{
-			Max = &(stus[i]);
-		}
-		if (Min == NULL || Min->Total > stus[i].Total)
-		{
-			Min = &(stus[i]);
-		}
-	}
-	fprintf(out, "×îµÍ·ÖÑ§Éú³É¼¨ĞÅÏ¢Îª:\n");
-	fprintf(out, "Ñ§ºÅ:%s ĞÕÃû:%s ¿Î³Ì:%s Æ½Ê±·Ö:%f ¿¼ÊÔ·Ö:%f ×ÜÆÀ·Ö:%f\n",
-		Min->stuId, Min->stuName, Min->courseName, Min->Regular,
-		Min->Exam, Min->Total);
+    struct stu *Max = NULL, *Min = NULL;
+    for (int i = 0; i < n; i++)
+    {
+        if (Max == NULL || Max->Total < stus[i].Total)
+        {
+            Max = &(stus[i]);
+        }
+        if (Min == NULL || Min->Total > stus[i].Total)
+        {
+            Min = &(stus[i]);
+        }
+    }
+    fprintf(out, "æœ€ä½åˆ†å­¦ç”Ÿæˆç»©ä¿¡æ¯ä¸º:\n");
+    fprintf(out, "å­¦å·:%s å§“å:%s è¯¾ç¨‹:%s å¹³æ—¶åˆ†:%f è€ƒè¯•åˆ†:%f æ€»è¯„åˆ†:%f\n",
+            Min->stuId, Min->stuName, Min->courseName, Min->Regular,
+            Min->Exam, Min->Total);
 
-	fprintf(out, "×î¸ß·ÖÑ§Éú³É¼¨ĞÅÏ¢Îª:\n");
-	fprintf(out, "Ñ§ºÅ:%s ĞÕÃû:%s ¿Î³Ì:%s Æ½Ê±·Ö:%f ¿¼ÊÔ·Ö:%f ×ÜÆÀ·Ö:%f\n",
-		Max->stuId, Max->stuName, Max->courseName, Max->Regular,
-		Max->Exam, Max->Total);
+    fprintf(out, "æœ€é«˜åˆ†å­¦ç”Ÿæˆç»©ä¿¡æ¯ä¸º:\n");
+    fprintf(out, "å­¦å·:%s å§“å:%s è¯¾ç¨‹:%s å¹³æ—¶åˆ†:%f è€ƒè¯•åˆ†:%f æ€»è¯„åˆ†:%f\n",
+            Max->stuId, Max->stuName, Max->courseName, Max->Regular,
+            Max->Exam, Max->Total);
 }
-void freeStruct(struct stu * stus)
+void freeStruct(struct stu *stus)
 {
-	free(stus->courseName);
-	free(stus);
+    free(stus->courseName);
+    free(stus);
 }

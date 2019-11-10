@@ -2,49 +2,49 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// ²ÎÊıÓ¦¸ÃÊÇÊı×é»òÕßÖ¸ÕëĞÎÊ½
+// å‚æ•°åº”è¯¥æ˜¯æ•°ç»„æˆ–è€…æŒ‡é’ˆå½¢å¼
 void link(char *s, char *t, char *r);
 int main(void)
 {
-	char s[128], t[128], r[256];
-	printf("ÇëÊäÈëµÚÒ»¸ö×Ö·û´®£º\n");
-	gets(s);
-	printf("ÇëÊäÈëµÚ¶ş¸ö×Ö·û´®£º\n");
-	gets(t);
-	link(s, t, r);
-	printf("Á¬½ÓºóµÄ×Ö·û´®£º\n%s", r);
-	return 0;
+    char s[128], t[128], r[256];
+    printf("è¯·è¾“å…¥ç¬¬ä¸€ä¸ªå­—ç¬¦ä¸²ï¼š\n");
+    gets(s);
+    printf("è¯·è¾“å…¥ç¬¬äºŒä¸ªå­—ç¬¦ä¸²ï¼š\n");
+    gets(t);
+    link(s, t, r);
+    printf("è¿æ¥åçš„å­—ç¬¦ä¸²ï¼š\n%s", r);
+    return 0;
 }
-void link(char *s, char *t, char *link)//; ¶àÓàµÄ·ÖºÅ
+void link(char *s, char *t, char *link) //; å¤šä½™çš„åˆ†å·
 {
-	char *k = link;
-	char temp;
-	while (*s != '\0' && *t != '\0')
-	{
-		if (*s < *t)
-		{
-			temp = *s;
-			s++;
-		}
-		else
-		{
-			temp = *t;
-			t++;
-		}
-		*link = temp;
-		link++;
-	}
-	while (*s != '\0')
-	{
-		*link = *s;
-		link++;
-		s++;
-	}
-	while (*t != '\0')
-	{
-		*link = *t;
-		link++;
-		t++;
-	}
-	*link = '\0';
+    char *k = link;
+    char temp;
+    while (*s != '\0' && *t != '\0')
+    {
+        if (*s < *t)
+        {
+            temp = *s;
+            s++;
+        }
+        else
+        {
+            temp = *t;
+            t++;
+        }
+        *link = temp;
+        link++;
+    }
+    while (*s != '\0')
+    {
+        *link = *s;
+        link++;
+        s++;
+    }
+    while (*t != '\0')
+    {
+        *link = *t;
+        link++;
+        t++;
+    }
+    *link = '\0';
 }

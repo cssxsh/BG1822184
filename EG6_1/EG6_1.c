@@ -1,23 +1,23 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 
-// º¯Êı²ÎÊıÓ¦¸ÃÖğ¸öÉùÃ÷
-int max(int a, int b)//; ÕâÀïÓĞÒ»¸ö¶àÓàµÄ£»
-{	// ±äÁ¿Ê¹ÓÃÇ°ÒªÉùÃ÷£¬²¢ÇÒ×îºÃ²»ÒªÓëÒÑÓĞº¯Êı»òÕß±äÁ¿Í¬Ãû
-	int result;
-	if (a > b)
-		result = a;
-	else
-		result = b;
+// å‡½æ•°å‚æ•°åº”è¯¥é€ä¸ªå£°æ˜
+int max(int a, int b) //; è¿™é‡Œæœ‰ä¸€ä¸ªå¤šä½™çš„ï¼›
+{                     // å˜é‡ä½¿ç”¨å‰è¦å£°æ˜ï¼Œå¹¶ä¸”æœ€å¥½ä¸è¦ä¸å·²æœ‰å‡½æ•°æˆ–è€…å˜é‡åŒå
+    int result;
+    if (a > b)
+        result = a;
+    else
+        result = b;
 
-	return result;
+    return result;
 }
 void main()
-{	// ±äÁ¿Óëº¯ÊıÖØÃû
-	int  Max, x, y;
+{ // å˜é‡ä¸å‡½æ•°é‡å
+    int Max, x, y;
 
-	printf("ÊäÈëÁ½¸öÕûÊı£¬ÓÃ¿Õ¸ñ¸ô¿ª£º");
-	scanf("%d%d", &x, &y);
-	Max = max(x, y);
-	printf("max=%d\n", Max);
+    printf("è¾“å…¥ä¸¤ä¸ªæ•´æ•°ï¼Œç”¨ç©ºæ ¼éš”å¼€ï¼š");
+    scanf("%d%d", &x, &y);
+    Max = max(x, y);
+    printf("max=%d\n", Max);
 }

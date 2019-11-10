@@ -4,67 +4,67 @@
 
 struct book
 {
-	char Name[32];		//  È√˚
-	float Price;		// µ•º€
+    char Name[32]; // ‰π¶Âêç
+    float Price;   // Âçï‰ª∑
 };
 
-void Sort(int n, struct book * books);
-void exchange(struct book * a, struct book * b);
+void Sort(int n, struct book *books);
+void exchange(struct book *a, struct book *b);
 
 int main(void)
 {
-	int n;
-	struct book * books = NULL;
+    int n;
+    struct book *books = NULL;
 
-	printf("«Î ‰»Î È±æ ˝:\n");
-	scanf("%d", &n);
+    printf("ËØ∑ËæìÂÖ•‰π¶Êú¨Êï∞:\n");
+    scanf("%d", &n);
 
-	books = malloc((sizeof(struct book) * n));
+    books = malloc((sizeof(struct book) * n));
 
-	for (int i = 0; i < n; i++)
-	{
-		printf("«Î ‰»Îµ⁄%d±æ Èµƒ–≈œ¢£∫\n", i + 1);
-		scanf("%s", &books[i].Name);
-		scanf("%f", &books[i].Price);
-	}
-	Sort(n, books);
+    for (int i = 0; i < n; i++)
+    {
+        printf("ËØ∑ËæìÂÖ•Á¨¨%dÊú¨‰π¶ÁöÑ‰ø°ÊÅØÔºö\n", i + 1);
+        scanf("%s", &books[i].Name);
+        scanf("%f", &books[i].Price);
+    }
+    Sort(n, books);
 
-	printf("\n≈≈–Ú∫Û È±æ–≈œ¢£∫\n");
-	for (int i = 0; i < n; i++)
-	{
-		printf("µ⁄%d±æ Èµƒ–≈œ¢£∫ È√˚£∫%s µ•º€£∫%f\n", 
-				i + 1, books[i].Name, books[i].Price);
-	}
+    printf("\nÊéíÂ∫èÂêé‰π¶Êú¨‰ø°ÊÅØÔºö\n");
+    for (int i = 0; i < n; i++)
+    {
+        printf("Á¨¨%dÊú¨‰π¶ÁöÑ‰ø°ÊÅØÔºö‰π¶ÂêçÔºö%s Âçï‰ª∑Ôºö%f\n",
+               i + 1, books[i].Name, books[i].Price);
+    }
 
-	free(books);
-	return 0;
+    free(books);
+    return 0;
 }
-void Sort(int n, struct book * books)
+void Sort(int n, struct book *books)
 {
-	for (int i = n; i > 0; i--)
-	{
-		for (int j = 1; j < i; j++)
-		{
-			if (books[j - 1].Price > books[j].Price)
-			{
-				exchange(&(books[j - 1]), &(books[j]));
-			}
-		}
-	}
+    for (int i = n; i > 0; i--)
+    {
+        for (int j = 1; j < i; j++)
+        {
+            if (books[j - 1].Price > books[j].Price)
+            {
+                exchange(&(books[j - 1]), &(books[j]));
+            }
+        }
+    }
 }
-void exchange(struct book * a, struct book * b)
+void exchange(struct book *a, struct book *b)
 {
-	char c;
-	float temp;
+    char c;
+    float temp;
 
-	temp = a->Price;
-	a->Price = b->Price;
-	b->Price = temp;
+    temp = a->Price;
+    a->Price = b->Price;
+    b->Price = temp;
 
-	for (int i = 0; i < 32; i++)
-	{
-		c = a->Name[i];
-		a->Name[i] = b->Name[i];
-		b->Name[i] = c;
-	}
+    for (int i = 0; i < 32; i++)
+    {
+        c = a->Name[i];
+        a->Name[i] = b->Name[i];
+        b->Name[i] = c;
+    }
 }

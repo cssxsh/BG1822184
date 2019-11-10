@@ -3,13 +3,13 @@
 
 int main(void)
 {
-	int i;
-	int sum = 0;//和的初值很重要
+    int i;
+    int sum = 0; // 鍜岀殑鍒濆�煎緢閲嶈
 
-	for (i = 1; i <= 100; i++)
-	{
-		sum += i;
-	}
-	printf("sum=%d\n", sum);
-	return 0;
+    for (i = 1; i <= 100; i++)
+    {
+        sum += i;
+    }
+    printf("sum=%d\n", sum);
+    return 0;
 }

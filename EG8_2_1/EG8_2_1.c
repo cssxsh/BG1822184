@@ -4,87 +4,90 @@
 
 struct stu
 {
-	char stuId[11];		// Ñ§ÉúÑ§ºÅ
-	char stuName[8];	// Ñ§ÉúĞÕÃû
-	char *courseName;	// ¿Î³ÌÃû³Æ
-	float Regular;		// Æ½Ê±³É¼¨
-	float Exam;			// ¿¼ÊÔ³É¼¨
-	float Total;		// ×ÜÆÀ³É¼¨
+    char stuId[11];   // å­¦ç”Ÿå­¦å·
+    char stuName[8];  // å­¦ç”Ÿå§“å
+    char *courseName; // è¯¾ç¨‹åç§°
+    float Regular;    // å¹³æ—¶æˆç»©
+    float Exam;       // è€ƒè¯•æˆç»©
+    float Total;      // æ€»è¯„æˆç»©
 };
-struct stu * getStuScore(int n);
+struct stu *getStuScore(int n);
 void CalcScore(int n, struct stu stus[]);
 void GetMaxAndMin(int n, struct stu stus[]);
-void freeStruct(struct stu * stus);
+void freeStruct(struct stu *stus);
 
 int main(void)
 {
-	int n;
-	struct stu * stus = NULL;
-	printf("ÇëÊäÈëÑ§Éú¸öÊı:\n");
-	scanf("%d", &n);
+    int n;
+    struct stu *stus = NULL;
+    printf("è¯·è¾“å…¥å­¦ç”Ÿä¸ªæ•°:\n");
+    scanf("%d", &n);
 
-	stus = getStuScore(n);
-	CalcScore(n, stus);
-	GetMaxAndMin(n, stus);
-	freeStruct(stus);
-	return 0;
+    stus = getStuScore(n);
+    CalcScore(n, stus);
+    GetMaxAndMin(n, stus);
+    freeStruct(stus);
+    return 0;
 }
-struct stu * getStuScore(int n)
+struct stu *getStuScore(int n)
 {
-	char *courseName = NULL;
-	struct stu * stus = NULL;
-	int c = 'c';
-	stus = malloc((sizeof(struct stu) * n));
-	courseName = malloc((sizeof(char) * 32));
+    char *courseName = NULL;
+    struct stu *stus = NULL;
+    int c = 'c';
+    stus = malloc((sizeof(struct stu) * n));
+    courseName = malloc((sizeof(char) * 32));
 
-	printf("ÇëÊäÈë¿Î³ÌÃû\n");
-	while(c != EOF && c != '\n') { c = getchar(); }
-	gets(courseName);
+    printf("è¯·è¾“å…¥è¯¾ç¨‹å\n");
+    while (c != EOF && c != '\n')
+    {
+        c = getchar();
+    }
+    gets(courseName);
 
-	for (int i = 0; i < n; i++)
-	{
-		printf("ÇëÊäÈëµÚ%d¸öÑ§ÉúµÄĞÅÏ¢£º\n", i + 1);
-		scanf("%s %s", stus[i].stuId, stus[i].stuName);
-		stus[i].courseName = courseName;
-		scanf("%f", &stus[i].Regular);
-		scanf("%f", &stus[i].Exam);
-	}
-	return stus;
+    for (int i = 0; i < n; i++)
+    {
+        printf("è¯·è¾“å…¥ç¬¬%dä¸ªå­¦ç”Ÿçš„ä¿¡æ¯ï¼š\n", i + 1);
+        scanf("%s %s", stus[i].stuId, stus[i].stuName);
+        stus[i].courseName = courseName;
+        scanf("%f", &stus[i].Regular);
+        scanf("%f", &stus[i].Exam);
+    }
+    return stus;
 }
 void CalcScore(int n, struct stu stus[])
 {
-	for (int i = 0; i < n; i++)
-	{
-		stus[i].Total = stus[i].Regular  * 0.20 + stus[i].Exam  * 0.80;
-		printf("µÚ%d¸öÑ§Éú×ÜÆÀ³É¼¨Îª%f\n", i + 1, stus[i].Total);
-	}
+    for (int i = 0; i < n; i++)
+    {
+        stus[i].Total = stus[i].Regular * 0.20 + stus[i].Exam * 0.80;
+        printf("ç¬¬%dä¸ªå­¦ç”Ÿæ€»è¯„æˆç»©ä¸º%f\n", i + 1, stus[i].Total);
+    }
 }
 void GetMaxAndMin(int n, struct stu stus[])
 {
-	struct stu * Max = NULL, *Min = NULL;
-	for (int i = 0; i < n; i++)
-	{
-		if (Max == NULL || Max->Total < stus[i].Total)
-		{
-			Max = &(stus[i]);
-		}
-		if (Min == NULL || Min->Total > stus[i].Total)
-		{
-			Min = &(stus[i]);
-		}
-	}
-	printf("×îµÍ·ÖÑ§Éú³É¼¨ĞÅÏ¢Îª:\n");
-	printf("Ñ§ºÅ:%s ĞÕÃû:%s ¿Î³Ì:%s Æ½Ê±·Ö:%f ¿¼ÊÔ·Ö:%f ×ÜÆÀ·Ö:%f\n",
-			Min->stuId, Min->stuName, Min->courseName, Min->Regular,
-			Min->Exam, Min->Total);
+    struct stu *Max = NULL, *Min = NULL;
+    for (int i = 0; i < n; i++)
+    {
+        if (Max == NULL || Max->Total < stus[i].Total)
+        {
+            Max = &(stus[i]);
+        }
+        if (Min == NULL || Min->Total > stus[i].Total)
+        {
+            Min = &(stus[i]);
+        }
+    }
+    printf("æœ€ä½åˆ†å­¦ç”Ÿæˆç»©ä¿¡æ¯ä¸º:\n");
+    printf("å­¦å·:%s å§“å:%s è¯¾ç¨‹:%s å¹³æ—¶åˆ†:%f è€ƒè¯•åˆ†:%f æ€»è¯„åˆ†:%f\n",
+           Min->stuId, Min->stuName, Min->courseName, Min->Regular,
+           Min->Exam, Min->Total);
 
-	printf("×î¸ß·ÖÑ§Éú³É¼¨ĞÅÏ¢Îª:\n");
-	printf("Ñ§ºÅ:%s ĞÕÃû:%s ¿Î³Ì:%s Æ½Ê±·Ö:%f ¿¼ÊÔ·Ö:%f ×ÜÆÀ·Ö:%f\n",
-		Max->stuId, Max->stuName, Max->courseName, Max->Regular,
-		Max->Exam, Max->Total);
+    printf("æœ€é«˜åˆ†å­¦ç”Ÿæˆç»©ä¿¡æ¯ä¸º:\n");
+    printf("å­¦å·:%s å§“å:%s è¯¾ç¨‹:%s å¹³æ—¶åˆ†:%f è€ƒè¯•åˆ†:%f æ€»è¯„åˆ†:%f\n",
+           Max->stuId, Max->stuName, Max->courseName, Max->Regular,
+           Max->Exam, Max->Total);
 }
-void freeStruct(struct stu * stus)
+void freeStruct(struct stu *stus)
 {
-	free(stus->courseName);
-	free(stus);
+    free(stus->courseName);
+    free(stus);
 }

@@ -1,4 +1,4 @@
-﻿#define _CRT_SECURE_NO_WARNINGS
+#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <math.h>
 
@@ -6,9 +6,9 @@ int main(void)
 {
 	double a, b, c;
 	char op;
-	printf("#这是一个简单的计算器#\n");
+printf("#这是一个简单的计算器#\n");
 	printf("请按格式[操作数1  运算符op  操作数2]输入数据：\n");
-	scanf("%lf %c%lf", &a, &op, &b);
+	scanf("%lf %c%lf",  &a, &op, &b);
 	switch (op)
 	{
 	case '+':

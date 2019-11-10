@@ -4,17 +4,17 @@
 double fact(int a);
 int main(void)
 {
-	int n;
-	printf("ÇëÊäÈëN£º");
-	scanf("%d", &n);
-	printf("%lf", fact(n));
-	return 0;
+    int n;
+    printf("è¯·è¾“å…¥Nï¼š");
+    scanf("%d", &n);
+    printf("%lf", fact(n));
+    return 0;
 }
 double fact(int a)
 {
-	if (a == 0)
-	{
-		return 1.0;
-	}
-	return fact(a - 1) * a;
+    if (a == 0)
+    {
+        return 1.0;
+    }
+    return fact(a - 1) * a;
 }

@@ -1,128 +1,128 @@
 #define _CRT_SECURE_NO_WARNINGS
-#include <stdio.h> 
-#include <stdlib.h> 
+#include <stdio.h>
+#include <stdlib.h>
 #define len 6
-const int arr[6] = { 21, 3, 15, 27, 11, 18 };
+const int arr[6] = {21, 3, 15, 27, 11, 18};
 struct stud_node
 {
-	int num;
-	struct stud_node *next;
+    int num;
+    struct stud_node *next;
 };
-struct stud_node * init(void);
-void printlist(struct stud_node * head);
-struct stud_node * getAt(struct stud_node * head, int n);
-int find(struct stud_node * head, int x);
-void insert(struct stud_node * head, int n, int x);
-void delete(struct stud_node * head, int n);
+struct stud_node *init(void);
+void printlist(struct stud_node *head);
+struct stud_node *getAt(struct stud_node *head, int n);
+int find(struct stud_node *head, int x);
+void insert(struct stud_node *head, int n, int x);
+void delete (struct stud_node *head, int n);
 
 int main()
 {
-	struct stud_node *head = NULL, *p = NULL;
-	int n, i;
-	int x;
+    struct stud_node *head = NULL, *p = NULL;
+    int n, i;
+    int x;
 
-	// ´´½¨´øÍ·½ÚµãµÄÓÐÐòÁ´±í
-	head = init();
-	printlist(head);
-	
-	// ²éÑ¯½Úµã
-	printf("ÇëÊäÈëÒª²éÑ¯½ÚµãµÄÐòºÅ£º");
-	scanf("%d", &n);
-	p = getAt(head, n);
-	printf("ÐòºÅÎª%dµÄ½áµãµÄÖµÎª£º%d\n", n, p->num);
-	
-	// ²éÕÒ½Úµã
-	printf("ÇëÊäÈëÒª²éÕÒ½ÚµãµÄÖµ£º");
-	scanf("%d", &x);
-	i = find(head, x);
-	printf("ÖµÎª%dµÄ½áµãµÄÐòºÅÎª£º%d\n", x, i);
+    // åˆ›å»ºå¸¦å¤´èŠ‚ç‚¹çš„æœ‰åºé“¾è¡¨
+    head = init();
+    printlist(head);
 
-	// ²åÈë½áµã
-	printf("ÇëÊäÈëÐòºÅ nºÍÖµx£º");
-	scanf("%d %d", &n, &x);
-	insert(head, n, x);
-	printlist(head);
+    // æŸ¥è¯¢èŠ‚ç‚¹
+    printf("è¯·è¾“å…¥è¦æŸ¥è¯¢èŠ‚ç‚¹çš„åºå·ï¼š");
+    scanf("%d", &n);
+    p = getAt(head, n);
+    printf("åºå·ä¸º%dçš„ç»“ç‚¹çš„å€¼ä¸ºï¼š%d\n", n, p->num);
 
-	// É¾³ý½áµã
-	printf("ÇëÊäÈëÒªÉ¾³ý½ÚµãµÄÐòºÅ£º");
-	scanf("%d", &n);
-	delete(head, n);
-	printlist(head);
-	
-	return  0;
+    // æŸ¥æ‰¾èŠ‚ç‚¹
+    printf("è¯·è¾“å…¥è¦æŸ¥æ‰¾èŠ‚ç‚¹çš„å€¼ï¼š");
+    scanf("%d", &x);
+    i = find(head, x);
+    printf("å€¼ä¸º%dçš„ç»“ç‚¹çš„åºå·ä¸ºï¼š%d\n", x, i);
+
+    // æ’å…¥ç»“ç‚¹
+    printf("è¯·è¾“å…¥åºå· nå’Œå€¼xï¼š");
+    scanf("%d %d", &n, &x);
+    insert(head, n, x);
+    printlist(head);
+
+    // åˆ é™¤ç»“ç‚¹
+    printf("è¯·è¾“å…¥è¦åˆ é™¤èŠ‚ç‚¹çš„åºå·ï¼š");
+    scanf("%d", &n);
+    delete (head, n);
+    printlist(head);
+
+    return 0;
 }
 
-struct stud_node * init(void)
+struct stud_node *init(void)
 {
-	struct stud_node *head;
-	struct stud_node *next;
+    struct stud_node *head;
+    struct stud_node *next;
 
-	// ÕâÀïÊ¹ÓÃµÄÊÇÓÐÍ·½ÚµãµÄÁ´±í
-	head = malloc(sizeof(struct stud_node));
-	head->next = NULL;
+    // è¿™é‡Œä½¿ç”¨çš„æ˜¯æœ‰å¤´èŠ‚ç‚¹çš„é“¾è¡¨
+    head = malloc(sizeof(struct stud_node));
+    head->next = NULL;
 
-	for (int i = 5; i >= 0; i--)
-	{
-		next = malloc(sizeof(struct stud_node));
-		next->next = head->next;
-		next->num = arr[i];
-		head->next = next;
-	}
-	return head;
+    for (int i = 5; i >= 0; i--)
+    {
+        next = malloc(sizeof(struct stud_node));
+        next->next = head->next;
+        next->num = arr[i];
+        head->next = next;
+    }
+    return head;
 }
-struct stud_node * getAt(struct stud_node * head, int n)
+struct stud_node *getAt(struct stud_node *head, int n)
 {
-	struct stud_node * p = head;
-	for (int i = 0; i < n; i++)
-	{
-		p = p->next;
-	}
-	return p;
+    struct stud_node *p = head;
+    for (int i = 0; i < n; i++)
+    {
+        p = p->next;
+    }
+    return p;
 }
-int find(struct stud_node * head, int x)
+int find(struct stud_node *head, int x)
 {
-	struct stud_node * p = head;
-	int i = 0;
-	while(p->next != NULL)
-	{
-		if (p->next->num != x)
-		{
-			p = p->next;
-			i++;
-		}
-		else
-		{
-			break;
-		}
-	}
-	return i + 1;
+    struct stud_node *p = head;
+    int i = 0;
+    while (p->next != NULL)
+    {
+        if (p->next->num != x)
+        {
+            p = p->next;
+            i++;
+        }
+        else
+        {
+            break;
+        }
+    }
+    return i + 1;
 }
-void insert(struct stud_node * head, int n, int x)
+void insert(struct stud_node *head, int n, int x)
 {
-	struct stud_node * p, *next;
-	p = getAt(head, n);
-	next = malloc(sizeof(struct stud_node));
-	next->num = x;
-	next->next = p->next;
-	p->next = next;
+    struct stud_node *p, *next;
+    p = getAt(head, n);
+    next = malloc(sizeof(struct stud_node));
+    next->num = x;
+    next->next = p->next;
+    p->next = next;
 }
-void delete(struct stud_node * head, int n)
+void delete (struct stud_node *head, int n)
 {
-	struct stud_node * p, *next;
-	p = getAt(head, n - 1);
-	next = p->next;
-	p->next = p->next->next;
-	free(next);
+    struct stud_node *p, *next;
+    p = getAt(head, n - 1);
+    next = p->next;
+    p->next = p->next->next;
+    free(next);
 }
-void printlist(struct stud_node * head)
+void printlist(struct stud_node *head)
 {
-	printf("´òÓ¡Á´±í%p\n", head);
-	struct stud_node * p;
-	int i = 1;
-	p = head->next;
-	while (p != NULL)
-	{
-		printf("%d: %d\n", i++, p->num);
-		p = p->next;
-	}
+    printf("æ‰“å°é“¾è¡¨%p\n", head);
+    struct stud_node *p;
+    int i = 1;
+    p = head->next;
+    while (p != NULL)
+    {
+        printf("%d: %d\n", i++, p->num);
+        p = p->next;
+    }
 }

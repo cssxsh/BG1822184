@@ -1,27 +1,28 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <stdlib.h>
+#include <limits.h>
 
 int main(void)
 {
-	int n, *arr, max = INT_MIN, min = INT_MAX;
-	double avg = 0.0;
-	printf("ÇëÊäÈëÒª²úÉúµÄËæ»úÊıµÄ¸öÊı£º");
-	scanf("%d", &n);
-	arr = malloc(sizeof(int) * n);
+    int n, *arr, max = INT_MIN, min = INT_MAX;
+    double avg = 0.0;
+    printf("è¯·è¾“å…¥è¦äº§ç”Ÿçš„éšæœºæ•°çš„ä¸ªæ•°ï¼š");
+    scanf("%d", &n);
+    arr = malloc(sizeof(int) * n);
 
-	srand(1701420218);
-	for (int i = 0; i < n; i++)
-	{
-		arr[i] = rand() % 11 + 10;
-		max = arr[i] > max ? arr[i] : max;
-		min = arr[i] < min ? arr[i] : min;
-		avg += arr[i];
-	}
-	avg /= n;
+    srand(1701420218);
+    for (int i = 0; i < n; i++)
+    {
+        arr[i] = rand() % 11 + 10;
+        max = arr[i] > max ? arr[i] : max;
+        min = arr[i] < min ? arr[i] : min;
+        avg += arr[i];
+    }
+    avg /= n;
 
-	printf("×î´óÖµ£º%d£¬×îĞ¡Öµ£º%d£¬Æ½¾ùÖµ£º%0.2lf¡£", max, min, avg);
+    printf("æœ€å¤§å€¼ï¼š%dï¼Œæœ€å°å€¼ï¼š%dï¼Œå¹³å‡å€¼ï¼š%0.2lfã€‚", max, min, avg);
 
-	free(arr);
-	return 0;
+    free(arr);
+    return 0;
 }

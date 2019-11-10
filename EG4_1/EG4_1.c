@@ -3,15 +3,15 @@
 
 int main(void)
 {
-	int i, j;
+    int i, j;
 
-	for (i = 1; i <= 4; i++)
-	{// µ÷ÕûµÚ¶þ¸öforµÄÅÐ¶ÏÌõ¼þ
-		for (j = 1; j < 2 * i; j++)
-		{
-			printf("%d", j);
-		}
-		printf("\n");
-	}
-	return 0;
+    for (i = 1; i <= 4; i++)
+    { // è°ƒæ•´ç¬¬äºŒä¸ªforçš„åˆ¤æ–­æ¡ä»¶
+        for (j = 1; j < 2 * i; j++)
+        {
+            printf("%d", j);
+        }
+        printf("\n");
+    }
+    return 0;
 }

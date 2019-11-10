@@ -2,13 +2,13 @@
 
 struct book
 {
-	float price;//¼Û¸ñ
-	char name[20];//Ãû×Ö
-	// Ãû×ÖÊôĞÔ×Ö·û´®Êı×éÓ¦¸Ã¸ü¼Ó³¤
-}; // ½á¹¹ÌâµÄÉùÃ÷Ó¦¸ÃÒÔ  ;  ½áÎ²
+    float price;   //ä»·æ ¼
+    char name[20]; //åå­—
+                   // åå­—å±æ€§å­—ç¬¦ä¸²æ•°ç»„åº”è¯¥æ›´åŠ é•¿
+};                 // ç»“æ„é¢˜çš„å£°æ˜åº”è¯¥ä»¥  ;  ç»“å°¾
 void main(void)
 {
-	struct book myBook = { 5.6,"the world is flat" };
-	// ½á¹¹ÌåÖ»ÄÜÔÚ³õÊ¼»¯Ê±ÅúÁ¿¸³Öµ
-	printf("book name=%s,book price=%f", myBook.name, myBook.price);
+    struct book myBook = {5.6, "the world is flat"};
+    // ç»“æ„ä½“åªèƒ½åœ¨åˆå§‹åŒ–æ—¶æ‰¹é‡èµ‹å€¼
+    printf("book name=%s,book price=%f", myBook.name, myBook.price);
 }

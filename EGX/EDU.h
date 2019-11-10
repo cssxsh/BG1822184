@@ -24,95 +24,95 @@ struct ScoreRecord
 };
 typedef struct ScoreRecord * Records;
 
-// ´òÓ¡²Ëµ¥
-// ²ÎÊıtypeÓÃÀ´Ö¸¶¨²Ëµ¥µÄÀàĞÍ
+// æ‰“å°èœå•
+// å‚æ•°typeç”¨æ¥æŒ‡å®šèœå•çš„ç±»å‹
 void DisPlayMenu(int type)
 {
 	switch (type)
 	{
 	case 0:
-		printf("1: ³É¼¨Í³¼Æ\n");
-		printf("2: ³É¼¨²éÑ¯\n");
-		printf("3: ³É¼¨¹ÜÀí\n");
-		printf("4: ĞÅÏ¢¹ÜÀí\n");
-		printf("E: ÍË³ö³ÌĞò\n");
+		printf("1: æˆç»©ç»Ÿè®¡\n");
+		printf("2: æˆç»©æŸ¥è¯¢\n");
+		printf("3: æˆç»©ç®¡ç†\n");
+		printf("4: ä¿¡æ¯ç®¡ç†\n");
+		printf("E: é€€å‡ºç¨‹åº\n");
 		break;
 	case 1:
-		printf("1: ÅÅĞò²éÑ¯\n");
-		printf("2: ±ÈÀı²éÑ¯\n");
-		printf("Q: ÍË³öÄ£¿é\n");
+		printf("1: æ’åºæŸ¥è¯¢\n");
+		printf("2: æ¯”ä¾‹æŸ¥è¯¢\n");
+		printf("Q: é€€å‡ºæ¨¡å—\n");
 		break;
 	case 11:
-		printf("1: µ¥¿Æ×ÜÆÀ×î¸ß·Ö\n");
-		printf("2: µ¥¿Æ×ÜÆÀ×îµÍ·Ö\n");
-		printf("3: ¿¼ºË·ÖÅÅĞò\n");
-		printf("4: ×ÜÆÀ·ÖÅÅĞò\n");
-		printf("Q: ÍË³öÄ£¿é\n");
+		printf("1: å•ç§‘æ€»è¯„æœ€é«˜åˆ†\n");
+		printf("2: å•ç§‘æ€»è¯„æœ€ä½åˆ†\n");
+		printf("3: è€ƒæ ¸åˆ†æ’åº\n");
+		printf("4: æ€»è¯„åˆ†æ’åº\n");
+		printf("Q: é€€å‡ºæ¨¡å—\n");
 		break;
 	case 2:
-		printf("1: °´¿Î³Ì²éÑ¯\n");
-		printf("2: °´Ñ§Éú²éÑ¯\n");
-		printf("Q: ÍË³öÄ£¿é\n");
+		printf("1: æŒ‰è¯¾ç¨‹æŸ¥è¯¢\n");
+		printf("2: æŒ‰å­¦ç”ŸæŸ¥è¯¢\n");
+		printf("Q: é€€å‡ºæ¨¡å—\n");
 		break;
 	case 22:
-		printf("1: °´ĞÕÃû²éÑ¯\n");
-		printf("2: °´°à¼¶²éÑ¯\n");
-		printf("3: °´Ñ§ºÅ²éÑ¯\n");
-		printf("Q: ÍË³öÄ£¿é\n");
+		printf("1: æŒ‰å§“åæŸ¥è¯¢\n");
+		printf("2: æŒ‰ç­çº§æŸ¥è¯¢\n");
+		printf("3: æŒ‰å­¦å·æŸ¥è¯¢\n");
+		printf("Q: é€€å‡ºæ¨¡å—\n");
 		break;
 	case 3:
-		printf("1: ÔöÉ¾¼ÇÂ¼\n");
-		printf("2: ³É¼¨µ¼³ö\n");
-		printf("3: ³É¼¨µ¼Èë\n");
-		printf("Q: ÍË³öÄ£¿é\n");
+		printf("1: å¢åˆ è®°å½•\n");
+		printf("2: æˆç»©å¯¼å‡º\n");
+		printf("3: æˆç»©å¯¼å…¥\n");
+		printf("Q: é€€å‡ºæ¨¡å—\n");
 		break;
 	case 31:
-		printf("1: Ôö¼Ó¼ÇÂ¼\n");
-		printf("2: ĞŞ¸Ä¼ÇÂ¼\n");
-		printf("3: É¾³ı¼ÇÂ¼\n");
-		printf("Q: ÍË³öÄ£¿é\n");
+		printf("1: å¢åŠ è®°å½•\n");
+		printf("2: ä¿®æ”¹è®°å½•\n");
+		printf("3: åˆ é™¤è®°å½•\n");
+		printf("Q: é€€å‡ºæ¨¡å—\n");
 		break;
 	case 4:
-		printf("1: µ¼³öÎÄ¼ş\n");
-		printf("2: µ¼ÈëÎÄ¼ş\n");
-		printf("Q: ÍË³öÄ£¿é\n");
+		printf("1: å¯¼å‡ºæ–‡ä»¶\n");
+		printf("2: å¯¼å…¥æ–‡ä»¶\n");
+		printf("Q: é€€å‡ºæ¨¡å—\n");
 		break;
 	default:
 		break;
 	}
-	printf("ÇëÊäÈë¶ÔÓ¦µÄ¹¦ÄÜĞòºÅ£º\n");
+	printf("è¯·è¾“å…¥å¯¹åº”çš„åŠŸèƒ½åºå·ï¼š\n");
 }
 
-// ´òÓ¡³É¼¨¼ÇÂ¼
+// æ‰“å°æˆç»©è®°å½•
 void printRecord(Records rec)
 {
-	printf("¿Î³Ì£º%s Ñ§ºÅ£º%s ĞÕÃû£º%s Æ½Ê±³É¼¨£º%f ¿¼ÊÔ³É¼¨£º%f ×ÜÆÀ³É¼¨£º%f\n",
+	printf("è¯¾ç¨‹ï¼š%s å­¦å·ï¼š%s å§“åï¼š%s å¹³æ—¶æˆç»©ï¼š%f è€ƒè¯•æˆç»©ï¼š%f æ€»è¯„æˆç»©ï¼š%f\n",
 		rec->Course, rec->Id, rec->Name, rec->Regular, rec->Exam, rec->Total);
 }
 
-// ´ÓÎÄ¼ş¼ÓÔØÑ§ÉúĞÅÏ¢
+// ä»æ–‡ä»¶åŠ è½½å­¦ç”Ÿä¿¡æ¯
 int LoadStudentInfo(const char * path, Stus ** AllStu, int * num)
 {
 	FILE * InfoFile = NULL;
-	errno_t err;
+	int err;
 	int number;
 	Stus stu;
 	
-	// ´ò¿ªÎÄ¼ş
-	err = fopen_s(&InfoFile, path, "r");
+	// æ‰“å¼€æ–‡ä»¶
+	err = fopen_s(&InfoFile, path, "r,ccs=UTF-8");
 	if (err != 0) {
-		fprintf(stderr, "Ñ§ÉúĞÅÏ¢ÎÄ¼ş´ò¿ªÊ§°Ü£¡\n");
+		fprintf(stderr, "å­¦ç”Ÿä¿¡æ¯æ–‡ä»¶æ‰“å¼€å¤±è´¥ï¼\n");
 		return 1;
 	}
 
-	// ¶ÁÈ¡Ñ§ÉúÊıÁ¿
+	// è¯»å–å­¦ç”Ÿæ•°é‡
 	fscanf(InfoFile, "%d", &number);
 
-	// ¶ÁÈ¡Ñ§ÉúÊı¾İ
+	// è¯»å–å­¦ç”Ÿæ•°æ®
 	*AllStu = (Stus *)malloc(sizeof(Stus) * number);
 	if (*AllStu == NULL)
 	{
-		fprintf(stderr, "ÄÚ´æ·ÖÅäÊ§°Ü£¡\n");
+		fprintf(stderr, "å†…å­˜åˆ†é…å¤±è´¥ï¼\n");
 		return 2;
 	}
 	for (int i = 0; i < number; i++)
@@ -120,13 +120,13 @@ int LoadStudentInfo(const char * path, Stus ** AllStu, int * num)
 		stu = (Stus)malloc(sizeof(struct Student));
 		if (stu == NULL)
 		{
-			fprintf(stderr, "ÄÚ´æ·ÖÅäÊ§°Ü£¡\n");
+			fprintf(stderr, "å†…å­˜åˆ†é…å¤±è´¥ï¼\n");
 			return 2;
 		}
 
 		fscanf(InfoFile, "%s %s %s", stu->Id, stu->Class, stu->Name);
 		if (err != 0) {
-			fprintf(stderr, "Ñ§ÉúĞÅÏ¢ÎÄ¼ş¶ÁÈ¡Ê§°Ü£¡\n");
+			fprintf(stderr, "å­¦ç”Ÿä¿¡æ¯æ–‡ä»¶è¯»å–å¤±è´¥ï¼\n");
 			return 1;
 		}
 		(*AllStu)[i] = stu;
@@ -135,24 +135,24 @@ int LoadStudentInfo(const char * path, Stus ** AllStu, int * num)
 	return 0;
 }
 
-// ±£´æÑ§ÉúÊı¾İµ½ÎÄ¼ş
+// ä¿å­˜å­¦ç”Ÿæ•°æ®åˆ°æ–‡ä»¶
 int SaveStudentInfo(const char * path, Stus * AllStu, int num)
 {
 	FILE * InfoFile = NULL;
-	errno_t err;
+	int err;
 	int number;
 	Stus stu;
 
 	number = num;
 
-	// ´ò¿ªÎÄ¼ş
-	err = fopen_s(&InfoFile, path, "w");
+	// æ‰“å¼€æ–‡ä»¶
+	err = fopen_s(&InfoFile, path, "w,ccs=UTF-8");
 	if (err != 0) {
-		fprintf(stderr, "Ñ§ÉúĞÅÏ¢ÎÄ¼ş´ò¿ªÊ§°Ü£¡\n");
+		fprintf(stderr, "å­¦ç”Ÿä¿¡æ¯æ–‡ä»¶æ‰“å¼€å¤±è´¥ï¼\n");
 		return 1;
 	}
 
-	// ±£´æÑ§ÉúÊıÁ¿
+	// ä¿å­˜å­¦ç”Ÿæ•°é‡
 	fprintf(InfoFile, "%d\n", number);
 	
 	for (int i = 0; i < number; i++)
@@ -164,31 +164,31 @@ int SaveStudentInfo(const char * path, Stus * AllStu, int num)
 	return 0;
 }
 
-// ´ÓÎÄ¼ş¼ÓÔØ³É¼¨Êı¾İ
+// ä»æ–‡ä»¶åŠ è½½æˆç»©æ•°æ®
 int LoadScoreData(const char * path, Records * data)
 {
 	FILE * InfoFile = NULL;
-	errno_t err;
+	int err;
 	int number;
 	Records head, p;
 
-	// ´ò¿ªÎÄ¼ş
-	err = fopen_s(&InfoFile, path, "r");
+	// æ‰“å¼€æ–‡ä»¶
+	err = fopen_s(&InfoFile, path, "r,ccs=UTF-8");
 	if (err != 0) {
-		fprintf(stderr, "³É¼¨Êı¾İÎÄ¼ş´ò¿ªÊ§°Ü£¡\n");
+		fprintf(stderr, "æˆç»©æ•°æ®æ–‡ä»¶æ‰“å¼€å¤±è´¥ï¼\n");
 		return 1;
 	}
 
-	// ¶ÁÈ¡ÊıÁ¿
+	// è¯»å–æ•°é‡
 	fscanf(InfoFile, "%d", &number);
 
-	// ¶ÁÈ¡Êı¾İ
+	// è¯»å–æ•°æ®
 	head = (Records)malloc(sizeof(struct ScoreRecord));
 	head->next = NULL;
 	head->Total = (float)number;
 	if (head == NULL)
 	{
-		fprintf(stderr, "ÄÚ´æ·ÖÅäÊ§°Ü£¡\n");
+		fprintf(stderr, "å†…å­˜åˆ†é…å¤±è´¥ï¼\n");
 		fclose(InfoFile);
 		return 2;
 	}
@@ -197,7 +197,7 @@ int LoadScoreData(const char * path, Records * data)
 		p = (Records)malloc(sizeof(struct ScoreRecord));
 		if (p == NULL)
 		{
-			fprintf(stderr, "ÄÚ´æ·ÖÅäÊ§°Ü£¡\n");
+			fprintf(stderr, "å†…å­˜åˆ†é…å¤±è´¥ï¼\n");
 			fclose(InfoFile);
 			return 2;
 		}
@@ -211,24 +211,24 @@ int LoadScoreData(const char * path, Records * data)
 	return 0;
 }
 
-// ±£´æ³É¼¨Êı¾İµ½ÎÄ¼ş
+// ä¿å­˜æˆç»©æ•°æ®åˆ°æ–‡ä»¶
 int SaveScoreData(const char * path, Records * data)
 {
 	FILE * InfoFile = NULL;
-	errno_t err;
+	int err;
 	int number;
 	Records p;
 
 	number = (int)(*data)->Total;
 
-	// ´ò¿ªÎÄ¼ş
-	err = fopen_s(&InfoFile, path, "w");
+	// æ‰“å¼€æ–‡ä»¶
+	err = fopen_s(&InfoFile, path, "w,ccs=UTF-8");
 	if (err != 0) {
-		fprintf(stderr, "³É¼¨Êı¾İÎÄ¼ş´ò¿ªÊ§°Ü£¡\n");
+		fprintf(stderr, "æˆç»©æ•°æ®æ–‡ä»¶æ‰“å¼€å¤±è´¥ï¼\n");
 		return 1;
 	}
 
-	// ±£´æÊıÁ¿
+	// ä¿å­˜æ•°é‡
 	fprintf(InfoFile, "%d\n", (int)((*data)->Total));
 	p = *data;
 	for (int i = 0; i < number; i++)
@@ -241,7 +241,7 @@ int SaveScoreData(const char * path, Records * data)
 	return 0;
 }
 
-// ¸ù¾İÅÅÃû²éÑ¯
+// æ ¹æ®æ’åæŸ¥è¯¢
 void GetByRank(Stus * AllStu, Records data, int stunum)
 {
 	char c = 'c', model;
@@ -260,11 +260,11 @@ void GetByRank(Stus * AllStu, Records data, int stunum)
 
 		switch (model)
 		{
-		case '1': // ²éÕÒ×î¸ß
-			printf("ÇëÊäÈë¿Î³ÌÃû£º\n");
+		case '1': // æŸ¥æ‰¾æœ€é«˜
+			printf("è¯·è¾“å…¥è¯¾ç¨‹åï¼š\n");
 			scanf("%s", temp);
 			p = data->next;
-			printf("²éÕÒ½á¹û£º\n");
+			printf("æŸ¥æ‰¾ç»“æœï¼š\n");
 			while (p != NULL)
 			{
 				if (!strcmp(p->Course, temp))
@@ -284,14 +284,14 @@ void GetByRank(Stus * AllStu, Records data, int stunum)
 				}
 				p = p->next;
 			}
-			if (Max == NULL) printf("Ã»ÓĞÕÒµ½ºÏÊÊµÄ¼ÇÂ¼!\n");
+			if (Max == NULL) printf("æ²¡æœ‰æ‰¾åˆ°åˆé€‚çš„è®°å½•!\n");
 			while ((c = getchar()) != EOF && c != '\n');
 			break;
-		case '2': // ²éÕÒ×îµÍ
-			printf("ÇëÊäÈë¿Î³ÌÃû£º\n");
+		case '2': // æŸ¥æ‰¾æœ€ä½
+			printf("è¯·è¾“å…¥è¯¾ç¨‹åï¼š\n");
 			scanf("%s", temp);
 			p = data->next;
-			printf("²éÕÒ½á¹û£º\n");
+			printf("æŸ¥æ‰¾ç»“æœï¼š\n");
 			while (p != NULL)
 			{
 				if (!strcmp(p->Course, temp))
@@ -311,16 +311,16 @@ void GetByRank(Stus * AllStu, Records data, int stunum)
 				}
 				p = p->next;
 			}
-			if (Min == NULL) printf("Ã»ÓĞÕÒµ½ºÏÊÊµÄ¼ÇÂ¼!\n");
+			if (Min == NULL) printf("æ²¡æœ‰æ‰¾åˆ°åˆé€‚çš„è®°å½•!\n");
 			while ((c = getchar()) != EOF && c != '\n');
 			break;
-		case '3': // ¿¼ÊÔ·ÖÅÅĞò
-			printf("ÇëÊäÈë¿Î³ÌÃû£º\n");
+		case '3': // è€ƒè¯•åˆ†æ’åº
+			printf("è¯·è¾“å…¥è¯¾ç¨‹åï¼š\n");
 			scanf("%s", temp);
-			printf("ÇëÊäÈëÅÅĞò·½Ïò(0ÎªÉıĞò£¬1Îª½µĞò)£º\n");
+			printf("è¯·è¾“å…¥æ’åºæ–¹å‘(0ä¸ºå‡åºï¼Œ1ä¸ºé™åº)ï¼š\n");
 			scanf("%d", &dic);
 			p = data->next;
-			printf("ÅÅĞò½á¹û£º\n");
+			printf("æ’åºç»“æœï¼š\n");
 			for (int i = stunum - 1; i > 0; i--)
 			{
 				for (int j = 0; j < i; j++)
@@ -371,14 +371,14 @@ void GetByRank(Stus * AllStu, Records data, int stunum)
 			}
 			while ((c = getchar()) != EOF && c != '\n');
 			break;
-		case '4': // ×ÜÆÀ·ÖÅÅĞò
+		case '4': // æ€»è¯„åˆ†æ’åº
 
-			printf("ÇëÊäÈë¿Î³ÌÃû£º\n");
+			printf("è¯·è¾“å…¥è¯¾ç¨‹åï¼š\n");
 			scanf("%s", temp);
-			printf("ÇëÊäÈëÅÅĞò·½Ïò(0ÎªÉıĞò£¬1Îª½µĞò)£º\n");
+			printf("è¯·è¾“å…¥æ’åºæ–¹å‘(0ä¸ºå‡åºï¼Œ1ä¸ºé™åº)ï¼š\n");
 			scanf("%d", &dic);
 			p = data->next;
-			printf("ÅÅĞò½á¹û£º\n");
+			printf("æ’åºç»“æœï¼š\n");
 			for (int i = stunum - 1; i > 0; i--)
 			{
 				for (int j = 0; j < i; j++)
@@ -438,7 +438,7 @@ void GetByRank(Stus * AllStu, Records data, int stunum)
 	while ((c = getchar()) != EOF && c != '\n');
 }
 
-// ¸ù¾İÑ§ÉúµÄĞÅÏ¢²éÑ¯
+// æ ¹æ®å­¦ç”Ÿçš„ä¿¡æ¯æŸ¥è¯¢
 void GetByStudentInfo(Stus * AllStu, Records data, int stunum)
 {
 	char c = 'c', model;
@@ -455,12 +455,12 @@ void GetByStudentInfo(Stus * AllStu, Records data, int stunum)
 
 		switch (model)
 		{
-		case '1': // °´ĞÕÃû²éÑ¯
+		case '1': // æŒ‰å§“åæŸ¥è¯¢
 			t = 0;
-			printf("ÇëÊäÈëĞÕÃû£º\n");
+			printf("è¯·è¾“å…¥å§“åï¼š\n");
 			scanf("%s", temp);
 			p = data->next;
-			printf("²éÕÒ½á¹û£º\n");
+			printf("æŸ¥æ‰¾ç»“æœï¼š\n");
 			while (p != NULL)
 			{
 				if (!strcmp(p->Name, temp))
@@ -470,15 +470,15 @@ void GetByStudentInfo(Stus * AllStu, Records data, int stunum)
 				}
 				p = p->next;
 			}
-			if (!t) printf("Ã»ÓĞÕÒµ½ºÏÊÊµÄ¼ÇÂ¼!\n");
+			if (!t) printf("æ²¡æœ‰æ‰¾åˆ°åˆé€‚çš„è®°å½•!\n");
 			while ((c = getchar()) != EOF && c != '\n');
 			break;
-		case '2': // °´°à¼¶²éÑ¯
+		case '2': // æŒ‰ç­çº§æŸ¥è¯¢
 			t = 0;
-			printf("ÇëÊäÈë°à¼¶£º\n");
+			printf("è¯·è¾“å…¥ç­çº§ï¼š\n");
 			scanf("%s", class);
 			p = data->next;
-			printf("²éÕÒ½á¹û£º\n");
+			printf("æŸ¥æ‰¾ç»“æœï¼š\n");
 			for (int i = 0; i < stunum; i++)
 			{
 				stu = AllStu[i];
@@ -495,15 +495,15 @@ void GetByStudentInfo(Stus * AllStu, Records data, int stunum)
 					}
 				}
 			}
-			if (!t) printf("Ã»ÓĞÕÒµ½ºÏÊÊµÄ¼ÇÂ¼!\n");
+			if (!t) printf("æ²¡æœ‰æ‰¾åˆ°åˆé€‚çš„è®°å½•!\n");
 			while ((c = getchar()) != EOF && c != '\n');
 			break;
-		case '3': // °´Ñ§ºÅ²éÑ¯
+		case '3': // æŒ‰å­¦å·æŸ¥è¯¢
 			t = 0;
-			printf("ÇëÊäÈëÑ§ºÅ£º\n");
+			printf("è¯·è¾“å…¥å­¦å·ï¼š\n");
 			scanf("%s", temp);
 			p = data->next;
-			printf("²éÕÒ½á¹û£º\n");
+			printf("æŸ¥æ‰¾ç»“æœï¼š\n");
 			while (p != NULL)
 			{
 				if (!strcmp(p->Id, temp))
@@ -513,7 +513,7 @@ void GetByStudentInfo(Stus * AllStu, Records data, int stunum)
 				}
 				p = p->next;
 			}
-			if (!t) printf("Ã»ÓĞÕÒµ½ºÏÊÊµÄ¼ÇÂ¼!\n");
+			if (!t) printf("æ²¡æœ‰æ‰¾åˆ°åˆé€‚çš„è®°å½•!\n");
 			while ((c = getchar()) != EOF && c != '\n');
 			break;
 		case 'Q':
@@ -525,7 +525,7 @@ void GetByStudentInfo(Stus * AllStu, Records data, int stunum)
 	while ((c = getchar()) != EOF && c != '\n');
 }
 
-// ³É¼¨¼ÇÂ¼ÔöÉ¾¸Ä
+// æˆç»©è®°å½•å¢åˆ æ”¹
 void ChangeRecord(Stus * AllStu, Records data, int stunum)
 {
 
@@ -542,11 +542,11 @@ void ChangeRecord(Stus * AllStu, Records data, int stunum)
 
 		switch (model)
 		{
-		case '1': // Ôö¼Ó¼ÇÂ¼
+		case '1': // å¢åŠ è®°å½•
 			s = (Records)malloc(sizeof(struct ScoreRecord));
 			s->next = NULL;
 
-			printf("ÇëÊäÈë¿Î³Ì Ñ§ºÅ ĞÕÃû Æ½Ê±·Ö ¿¼ÊÔ·Ö ×ÜÆÀ·Ö£¨°´ÉÏÊöË³ĞòÊäÈë£©£º\n");
+			printf("è¯·è¾“å…¥è¯¾ç¨‹ å­¦å· å§“å å¹³æ—¶åˆ† è€ƒè¯•åˆ† æ€»è¯„åˆ†ï¼ˆæŒ‰ä¸Šè¿°é¡ºåºè¾“å…¥ï¼‰ï¼š\n");
 			scanf("%s %s %s %f %f %f",
 				s->Course, s->Id, s->Name, &(s->Regular), &(s->Exam), &(s->Total));
 
@@ -567,20 +567,20 @@ void ChangeRecord(Stus * AllStu, Records data, int stunum)
 				s->next = data->next;
 				data->next = s;
 				data->Total = data->Total + 1;
-				printf("Ìí¼ÓÍê³É¡£\n");
+				printf("æ·»åŠ å®Œæˆã€‚\n");
 			}
 			else
 			{
-				printf("¼ÇÂ¼ÒÑ´æÔÚ£¡\n");
+				printf("è®°å½•å·²å­˜åœ¨ï¼\n");
 			}
 			while ((c = getchar()) != EOF && c != '\n');
 			break;
-		case '2': // ĞŞ¸Ä¼ÇÂ¼
+		case '2': // ä¿®æ”¹è®°å½•
 			t = 0;
-			printf("ÇëÊäÈë¿Î³Ì Ñ§ºÅ£¨°´ÉÏÊöË³ĞòÊäÈë£©£º\n");
+			printf("è¯·è¾“å…¥è¯¾ç¨‹ å­¦å·ï¼ˆæŒ‰ä¸Šè¿°é¡ºåºè¾“å…¥ï¼‰ï¼š\n");
 			scanf("%s %s", temp, Id);
 			p = data->next;
-			printf("²éÕÒ½á¹û£º\n");
+			printf("æŸ¥æ‰¾ç»“æœï¼š\n");
 			while (p != NULL)
 			{
 				if (!strcmp(p->Id, Id) && !strcmp(p->Course, temp))
@@ -593,22 +593,22 @@ void ChangeRecord(Stus * AllStu, Records data, int stunum)
 			}
 			if (!t)
 			{
-				printf("Ã»ÓĞÕÒµ½ºÏÊÊµÄ¼ÇÂ¼!\n");
+				printf("æ²¡æœ‰æ‰¾åˆ°åˆé€‚çš„è®°å½•!\n");
 			}
 			else
 			{
-				printf("Æ½Ê±·Ö£¬ ¿¼ÊÔ·Ö£¬ ×ÜÆÀ·ÖĞŞ¸ÄÎª£¨°´ÉÏÊöË³ĞòÊäÈë£©£º\n");
+				printf("å¹³æ—¶åˆ†ï¼Œ è€ƒè¯•åˆ†ï¼Œ æ€»è¯„åˆ†ä¿®æ”¹ä¸ºï¼ˆæŒ‰ä¸Šè¿°é¡ºåºè¾“å…¥ï¼‰ï¼š\n");
 				scanf("%f %f %f", &(p->Regular), &(p->Exam), &(p->Total));
-				printf("ĞŞ¸ÄÍê³É¡£\n");
+				printf("ä¿®æ”¹å®Œæˆã€‚\n");
 			}
 			while ((c = getchar()) != EOF && c != '\n');
 			break;
-		case '3': // É¾³ı¼ÇÂ¼
+		case '3': // åˆ é™¤è®°å½•
 			t = 0;
-			printf("ÇëÊäÈë¿Î³Ì Ñ§ºÅ£¨°´ÉÏÊöË³ĞòÊäÈë£©£º\n");
+			printf("è¯·è¾“å…¥è¯¾ç¨‹ å­¦å·ï¼ˆæŒ‰ä¸Šè¿°é¡ºåºè¾“å…¥ï¼‰ï¼š\n");
 			scanf("%s %s", temp, Id);
 			p = data;
-			printf("²éÕÒ½á¹û£º\n");
+			printf("æŸ¥æ‰¾ç»“æœï¼š\n");
 			while (p->next != NULL)
 			{
 				if (!strcmp(p->next->Id, Id) && !strcmp(p->next->Course, temp))
@@ -621,7 +621,7 @@ void ChangeRecord(Stus * AllStu, Records data, int stunum)
 			}
 			if (!t)
 			{
-				printf("Ã»ÓĞÕÒµ½ºÏÊÊµÄ¼ÇÂ¼!\n");
+				printf("æ²¡æœ‰æ‰¾åˆ°åˆé€‚çš„è®°å½•!\n");
 			}
 			else
 			{
@@ -629,7 +629,7 @@ void ChangeRecord(Stus * AllStu, Records data, int stunum)
 				p->next = p->next->next;
 				free(s);
 				data->Total = data->Total - 1;
-				printf("É¾³ıÍê³É¡£\n");
+				printf("åˆ é™¤å®Œæˆã€‚\n");
 			}
 			while ((c = getchar()) != EOF && c != '\n');
 			break;
@@ -643,7 +643,7 @@ void ChangeRecord(Stus * AllStu, Records data, int stunum)
 	while ((c = getchar()) != EOF && c != '\n');
 }
 
-// ³É¼¨Í³¼Æ
+// æˆç»©ç»Ÿè®¡
 void Memu1(Stus * AllStu, Records data, int stunum)
 {
 	int flag = 1, count = 0, good = 0, bad = 0;
@@ -658,14 +658,14 @@ void Memu1(Stus * AllStu, Records data, int stunum)
 		while ((c = getchar()) != EOF && c != '\n');
 		switch (model)
 		{
-		case '1': // ÈËÔ±²éÑ¯
+		case '1': // äººå‘˜æŸ¥è¯¢
 			GetByRank(AllStu, data, stunum);
 			break;
-		case '2': // ±ÈÀı²éÑ¯
-			printf("ÇëÊäÈë¿Î³ÌÃû£º\n");
+		case '2': // æ¯”ä¾‹æŸ¥è¯¢
+			printf("è¯·è¾“å…¥è¯¾ç¨‹åï¼š\n");
 			scanf("%s", temp);
 			p = data->next;
-			printf("²éÕÒ½á¹û£º\n");
+			printf("æŸ¥æ‰¾ç»“æœï¼š\n");
 			while (p != NULL)
 			{
 				if (!strcmp(p->Course, temp))
@@ -678,14 +678,14 @@ void Memu1(Stus * AllStu, Records data, int stunum)
 			}
 			if (count == 0)
 			{
-				printf("¿Î³Ì%s²»´æÔÚ!\n", temp);
+				printf("è¯¾ç¨‹%sä¸å­˜åœ¨!\n", temp);
 			}
 			else
 			{
-				printf("¿Î³Ì%sÓÅĞãÂÊ%f ²»¼°¸ñÂÊ%f\n", temp, good / (float)count, bad / (float)count);
+				printf("è¯¾ç¨‹%sä¼˜ç§€ç‡%f ä¸åŠæ ¼ç‡%f\n", temp, good / (float)count, bad / (float)count);
 			}
 			break;
-		case 'Q': // ÍË³öÄ£¿é
+		case 'Q': // é€€å‡ºæ¨¡å—
 		default:
 			flag = 0;
 			break;
@@ -695,7 +695,7 @@ void Memu1(Stus * AllStu, Records data, int stunum)
 	while ((c = getchar()) != EOF && c != '\n');
 }
 
-// ³É¼¨²éÑ¯
+// æˆç»©æŸ¥è¯¢
 void Memu2(Stus * AllStu, Records data, int stunum)
 {
 	int flag = 1, t = 0;
@@ -710,12 +710,12 @@ void Memu2(Stus * AllStu, Records data, int stunum)
 		while ((c = getchar()) != EOF && c != '\n');
 		switch (model)
 		{
-		case '1': // °´¿Î³Ì²éÑ¯
+		case '1': // æŒ‰è¯¾ç¨‹æŸ¥è¯¢
 			t = 0;
-			printf("ÇëÊäÈë¿Î³ÌÃû£º\n");
+			printf("è¯·è¾“å…¥è¯¾ç¨‹åï¼š\n");
 			scanf("%s", temp);
 			p = data->next;
-			printf("²éÕÒ½á¹û£º\n");
+			printf("æŸ¥æ‰¾ç»“æœï¼š\n");
 			while (p != NULL)
 			{
 				if (!strcmp(p->Course, temp))
@@ -725,12 +725,12 @@ void Memu2(Stus * AllStu, Records data, int stunum)
 				}
 				p = p->next;
 			}
-			if (t == 0) printf("Ã»ÓĞÕÒµ½ºÏÊÊµÄ¼ÇÂ¼!\n");
+			if (t == 0) printf("æ²¡æœ‰æ‰¾åˆ°åˆé€‚çš„è®°å½•!\n");
 			break;
-		case '2': // °´¿Î³Ì²éÑ¯
+		case '2': // æŒ‰è¯¾ç¨‹æŸ¥è¯¢
 			GetByStudentInfo(AllStu, data, stunum);
 			break;
-		case 'Q': // ÍË³öÄ£¿é
+		case 'Q': // é€€å‡ºæ¨¡å—
 		default:
 			flag = 0;
 			break;
@@ -740,7 +740,7 @@ void Memu2(Stus * AllStu, Records data, int stunum)
 	while ((c = getchar()) != EOF && c != '\n');
 }
 
-// ³É¼¨¹ÜÀí
+// æˆç»©ç®¡ç†
 void Memu3(Stus * AllStu, Records data, int stunum)
 {
 	int flag = 1;
@@ -754,26 +754,26 @@ void Memu3(Stus * AllStu, Records data, int stunum)
 		while ((c = getchar()) != EOF && c != '\n');
 		switch (model)
 		{
-		case '1': // ÔöÉ¾¼ÇÂ¼
+		case '1': // å¢åˆ è®°å½•
 			ChangeRecord(AllStu, data, stunum);
 			break;
-		case '2': // ³É¼¨µ¼³ö
-			printf("ÇëÊäÈëµ¼³öÂ·¾¶£º\n");
+		case '2': // æˆç»©å¯¼å‡º
+			printf("è¯·è¾“å…¥å¯¼å‡ºè·¯å¾„ï¼š\n");
 			scanf("%s", path);
 			if (!SaveScoreData(path, &data))
 			{
-				printf("µ¼³öÍê³É£¡\n");
+				printf("å¯¼å‡ºå®Œæˆï¼\n");
 			}
 			break;
-		case '3': // ³É¼¨µ¼³ö
-			printf("ÇëÊäÈëµ¼³öÂ·¾¶£º\n");
+		case '3': // æˆç»©å¯¼å‡º
+			printf("è¯·è¾“å…¥å¯¼å‡ºè·¯å¾„ï¼š\n");
 			scanf("%s", path);
 			if (!LoadScoreData(path, &data))
 			{
-				printf("µ¼ÈëÍê³É£¡\n");
+				printf("å¯¼å…¥å®Œæˆï¼\n");
 			}
 			break;
-		case 'Q': // ÍË³öÄ£¿é
+		case 'Q': // é€€å‡ºæ¨¡å—
 		default:
 			flag = 0;
 			break;
@@ -783,7 +783,7 @@ void Memu3(Stus * AllStu, Records data, int stunum)
 	while ((c = getchar()) != EOF && c != '\n');
 }
 
-// ĞÅÏ¢¹ÜÀí
+// ä¿¡æ¯ç®¡ç†
 void Memu4(Stus * AllStu, Records data, int stunum)
 {
 	int flag = 1;
@@ -797,24 +797,24 @@ void Memu4(Stus * AllStu, Records data, int stunum)
 		while ((c = getchar()) != EOF && c != '\n');
 		switch (model)
 		{
-		case '1': // µ¼ÈëÎÄ¼ş
-			printf("ÇëÊäÈëµ¼³öÂ·¾¶£º\n");
+		case '1': // å¯¼å…¥æ–‡ä»¶
+			printf("è¯·è¾“å…¥å¯¼å‡ºè·¯å¾„ï¼š\n");
 			scanf("%s", path);
 			if (!SaveStudentInfo(path, AllStu, stunum))
 			{
-				printf("µ¼³öÍê³É£¡\n");
+				printf("å¯¼å‡ºå®Œæˆï¼\n");
 			}
 			break;
-		case '2': // µ¼³öÎÄ¼ş
-			printf("ÇëÊäÈëµ¼ÈëÂ·¾¶£º\n");
+		case '2': // å¯¼å‡ºæ–‡ä»¶
+			printf("è¯·è¾“å…¥å¯¼å…¥è·¯å¾„ï¼š\n");
 			scanf("%s", path);
 			if (!LoadStudentInfo(path, &AllStu, &stunum))
 			{
-				printf("µ¼ÈëÍê³É£¡\n");
+				printf("å¯¼å…¥å®Œæˆï¼\n");
 			}
 			break;
 			break;
-		case 'Q': // ÍË³öÄ£¿é
+		case 'Q': // é€€å‡ºæ¨¡å—
 		default:
 			flag = 0;
 			break;
@@ -824,7 +824,7 @@ void Memu4(Stus * AllStu, Records data, int stunum)
 	while ((c = getchar()) != EOF && c != '\n');
 }
 
-// Ö÷²Ëµ¥
+// ä¸»èœå•
 void MainMemu(Stus * AllStu, Records data, int stunum)
 {
 	int flag = 1;
@@ -839,19 +839,19 @@ void MainMemu(Stus * AllStu, Records data, int stunum)
 		while ((c = getchar()) != EOF && c != '\n');
 		switch (model)
 		{
-		case '1': // ³É¼¨Í³¼Æ
+		case '1': // æˆç»©ç»Ÿè®¡
 			Memu1(AllStu, data, stunum);
 			break;
-		case '2': // ³É¼¨²éÑ¯
+		case '2': // æˆç»©æŸ¥è¯¢
 			Memu2(AllStu, data, stunum);
 			break;
-		case '3': // ³É¼¨¹ÜÀí
+		case '3': // æˆç»©ç®¡ç†
 			Memu3(AllStu, data, stunum);
 			break;
-		case '4': // ĞÅÏ¢¹ÜÀí
+		case '4': // ä¿¡æ¯ç®¡ç†
 			Memu4(AllStu, data, stunum);
 			break;
-		case 'E': // ÍË³ö³ÌĞò
+		case 'E': // é€€å‡ºç¨‹åº
 		default:
 			flag = 0;
 			break;
