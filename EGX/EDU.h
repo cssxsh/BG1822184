@@ -869,6 +869,7 @@ void FreeStruct(Stus * AllStu, Records data, int stunum)
 	}
 	free(AllStu);
 
+    if (data == NULL) return;
 	while (data->next != NULL)
 	{
 
